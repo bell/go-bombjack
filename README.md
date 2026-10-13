@@ -49,6 +49,20 @@ A standard gamepad also works.
 
 Requirements: **Go 1.27+**.
 
+With **Nix**, enter the development shell to get Go, Make, a C compiler,
+Python (for the browser server), and the required Linux libraries:
+
+```bash
+nix develop path:.
+make run
+```
+
+Or launch directly with `nix develop path:. -c make run`. The pinned dependencies are
+recorded in `flake.lock`. A graphical desktop session is required for native play.
+On Linux, the shell uses `/run/opengl-driver/lib` when available to find the host's
+GPU driver. Non-NixOS systems without that directory may need
+[nixGL](https://github.com/nix-community/nixGL) for native OpenGL applications.
+
 - **macOS and Windows** need nothing else.
 - **Linux** needs the usual Ebitengine dependencies:
 
