@@ -49,8 +49,8 @@ A standard gamepad also works.
 
 Requirements: **Go 1.27+**.
 
-With **Nix**, enter the development shell to get Go, Make, a C compiler,
-Python (for the browser server), and the required Linux libraries:
+With **Nix**, enter the development shell (using NixOS 26.05 packages) to get Go,
+Make, a C compiler, Python (for the browser server), and the required Linux libraries:
 
 ```bash
 nix develop path:.
